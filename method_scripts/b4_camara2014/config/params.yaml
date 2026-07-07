@@ -1,0 +1,25 @@
+# B4: Camara et al. 2014 — Square Matrix Determinant+Minors Zero Watermarking
+
+# Primary key column name
+pk_col: "id"
+
+# Numeric attribute columns (empty = auto-detect all numeric cols except pk)
+# gamma = len(numeric_cols); must have >= 2 numeric attributes
+# numeric_cols: []
+
+# Secret key
+secret_key: "B4_Camara2014_SecretKey"
+
+# Owner ID and timestamp (for CA registration)
+owner_id: "owner_001"
+
+# Number of groups v = ceil(alpha / gamma) — computed automatically from data
+# Override here only for fixed-size experiments:
+# num_groups: null
+
+# Seed management
+base_seed: 400
+num_trials: 10
+
+# Output directory
+output_dir: "results/b4_camara2014"

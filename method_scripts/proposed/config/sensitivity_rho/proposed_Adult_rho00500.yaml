@@ -1,0 +1,14 @@
+# ── Sensitivity S1: Proposed @ rho=5.00% for Adult (delta=1e-6) ──
+# t* = 23  C_pk=483  g=27974  metadata=229,698 B = 5.000% of 4,594,040 B
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_capacity: 483
+iblt_mult: 1.5
+iblt_k: 3
+delta: 1.000000e-06
+gt_b: 64
+gt_m: 23
+gt_s_del: 23
+detection_mode: "compressed"

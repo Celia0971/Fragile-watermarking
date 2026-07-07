@@ -1,0 +1,58 @@
+# Attack configuration for fragile watermarking experiments
+# All rates (rho_*) are fractions of total tuples n.
+
+# ── Single-operation attacks ─────────────────────────────────────────────────
+# A1: Bit-flip on numeric LSB  (only relevant for non-zero-distortion methods)
+a1_bit_flip:
+  rho: [0.01, 0.05, 0.10, 0.20]    # fraction of tuples to attack
+
+# A2: Rounding attack (round numeric values to nearest integer / k decimals)
+a2_rounding:
+  rho: [0.01, 0.05, 0.10, 0.20]
+  decimal_places: 0                 # round to this many decimals
+
+# A3: Additive Gaussian noise on numeric attributes
+a3_additive_noise:
+  rho: [0.01, 0.05, 0.10, 0.20]
+  noise_scale_method: "std_fraction" # scale noise as fraction of attribute std
+  noise_scale: 0.01                  # 1% of std  → small imperceptible change
+
+# A4: Tuple insertion  (rho_ins fraction of n tuples inserted)
+a4_insertion:
+  rho_ins: [0.01, 0.05, 0.10, 0.15, 0.20]
+  value_source: "empirical"         # sample from empirical distribution of each column
+
+# A5: Tuple deletion  (rho_del fraction of n tuples deleted)
+a5_deletion:
+  rho_del: [0.01, 0.05, 0.10, 0.15, 0.20]
+
+# A6: Attribute value modification  (rho_mod fraction of tuples, all numeric cols)
+a6_modification:
+  rho_mod: [0.01, 0.05, 0.10, 0.15, 0.20]
+  noise_scale_method: "std_fraction"
+  noise_scale: 0.01
+
+# A8: Tuple substitution / swap  (rho_sub fraction of n/2 swap pairs)
+a8_substitution:
+  rho_sub: [0.01, 0.05, 0.10, 0.15, 0.20]
+  # Swap rho_sub * floor(n/2) pairs of tuples (swap all attribute values)
+
+# ── Mixed attacks ────────────────────────────────────────────────────────────
+# M2: Insertion + Deletion (equal amounts, net size preserved)
+m2_mixed_ins_del:
+  rho: [0.05, 0.10, 0.20, 0.30]    # rho/2 deleted, rho/2 inserted
+
+# M3: Modification + Insertion
+m3_mixed_mod_ins:
+  rho: [0.05, 0.10, 0.20, 0.30]    # rho/2 modified, rho/2 inserted
+  noise_scale: 0.01
+
+# M4: Modification + Deletion
+m4_mixed_mod_del:
+  rho: [0.05, 0.10, 0.20, 0.30]    # rho/2 modified, rho/2 deleted
+  noise_scale: 0.01
+
+# M5: All-in-one (modification + insertion + deletion, rho/3 each)
+m5_all:
+  rho: [0.05, 0.10, 0.20, 0.30]
+  noise_scale: 0.01

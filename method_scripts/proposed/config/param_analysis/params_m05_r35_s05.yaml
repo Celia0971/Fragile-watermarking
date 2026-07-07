@@ -1,0 +1,18 @@
+# ── Proposed Scheme: Parameter Analysis Config (supplementary) ──────────────
+# iblt_mode: "basic"; iblt_capacity = d_max = s + r; g auto-computed (Eq.12).
+# Controlled: vary_r   Fixed: m=5,s=5   denom=m+r+1=41 (non power-of-2)
+# ────────────────────────────────────────────────────────────────────────────
+
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_mult: 1.5
+iblt_k: 3
+delta: 9.54e-7
+gt_b: 128
+detection_mode: "compressed"
+
+iblt_capacity: 40    # s=5, r=35
+gt_m: 5
+gt_s_del: 35

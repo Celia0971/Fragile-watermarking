@@ -1,0 +1,16 @@
+# ── Proposed scheme: storage-budgeted config for Bank ──
+# Solved by solve_storage_params.py: rho=0.01, delta=2^-10
+# t* = 12 (balanced tolerance: q_mod<=m, q_del<=r, q_ins+q_del<=s+r)
+# g = 5950  |  metadata = 51,467 B = 1.000% of 5,148,066 B
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_capacity: 316          # C_pk = s + r
+iblt_mult: 1.5
+iblt_k: 3
+delta: 9.765625e-04
+gt_b: 64
+gt_m: 12
+gt_s_del: 5
+detection_mode: "compressed"

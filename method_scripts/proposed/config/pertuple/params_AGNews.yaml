@@ -1,0 +1,16 @@
+# ── per-tuple-digest baseline (Proposed full mode, b=64) for AGNews ──
+# Solved by solve_storage_params.py: rho=0.01, delta=1.000e-06
+# t* = 25 (balanced tolerance: q_mod<=m, q_del<=r, q_ins+q_del<=s+r)
+# g = 35675  |  metadata = 296,496 B = 1.000% of 29,650,876 B
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_capacity: 882          # C_pk = s + r
+iblt_mult: 1.5
+iblt_k: 3
+delta: 1.000000e-06
+gt_b: 64
+gt_m: 25
+gt_s_del: 25
+detection_mode: "full"

@@ -1,0 +1,14 @@
+# ── Sensitivity S1: Proposed @ rho=1.00% for AGNews (delta=1e-6) ──
+# t* = 25  C_pk=882  g=35675  metadata=296,496 B = 1.000% of 29,650,876 B
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_capacity: 882
+iblt_mult: 1.5
+iblt_k: 3
+delta: 1.000000e-06
+gt_b: 64
+gt_m: 25
+gt_s_del: 25
+detection_mode: "compressed"

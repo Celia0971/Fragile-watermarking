@@ -1,0 +1,23 @@
+# B5: Alfagi et al. 2016 — Character & Text-Length Frequency Zero Watermarking
+
+# Primary key column name
+pk_col: "id"
+
+# Textual attribute columns (empty = auto-detect all non-numeric, non-pk columns)
+# text_cols: []
+
+# Secret key
+secret_key: "B5_Alfagi2016_SecretKey"
+
+# Owner ID
+owner_id: "owner_001"
+
+# Tolerance for WAR/WDR comparison (floating-point frequency comparison)
+tolerance: 1e-9
+
+# Seed management
+base_seed: 500
+num_trials: 10
+
+# Output directory
+output_dir: "results/b5_alfagi2016"

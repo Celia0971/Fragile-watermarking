@@ -1,0 +1,21 @@
+# B2: Guo et al. 2006 — Fragile Watermarking for Numeric Relational Data
+# Modifies 2 LSBs of numeric attribute values.
+
+# Primary key column name
+pk_col: "id"
+
+# Number of groups g: tuples partitioned by HASH(K, pk) mod g
+num_groups: 10
+
+# Secret key
+secret_key: "B2_Guo2006_SecretKey"
+
+# Numeric attribute columns to watermark (leave empty to auto-detect all numeric cols except pk)
+# numeric_cols: []  # empty = auto-detect
+
+# Seed management
+base_seed: 200
+num_trials: 10
+
+# Output directory
+output_dir: "results/b2_guo2006"

@@ -1,0 +1,25 @@
+# ── Proposed Scheme: BALANCED BASELINE config for FCT ───────────────────────
+# Target: all attacks F1≈1 up to tc≈300 (A4/Sub degrades earlier ~150, accepted).
+#   d_max = s + r = 300 + 59 = 359  → insertion/deletion (Layer-1) covered to ~300
+#   C = m(m+r+1) = 23*83 = 1909, est. k* ≈ 300 → modification (Layer-2) to ~300
+#   g ≈ 62,971 → storage ≈ 11% of full-mode (claim "about 10%")
+#   denom = m+r+1 = 83 (NOT a power of two — safe)
+# iblt_mode: "basic" (explicit s,r), NOT storage_optimized.
+# ────────────────────────────────────────────────────────────────────────────
+
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_mult: 1.5
+iblt_k: 3
+delta: 9.54e-7
+gt_b: 128
+detection_mode: "compressed"
+
+# d_max = s + r = 300 + 59 = 359
+iblt_capacity: 359    # s=300, r=59
+
+# Group-testing tolerance parameters
+gt_m: 23              # m = modification tolerance
+gt_s_del: 59          # r = deletion tolerance (also used in p = 1/(m+r+1))

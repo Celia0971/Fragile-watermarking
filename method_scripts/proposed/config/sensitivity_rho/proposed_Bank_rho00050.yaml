@@ -1,0 +1,14 @@
+# ── Sensitivity S1: Proposed @ rho=0.50% for Bank (delta=1e-6) ──
+# t* = 6  C_pk=290  g=2773  metadata=25,734 B = 0.500% of 5,148,066 B
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_capacity: 290
+iblt_mult: 1.5
+iblt_k: 3
+delta: 1.000000e-06
+gt_b: 64
+gt_m: 6
+gt_s_del: 6
+detection_mode: "compressed"

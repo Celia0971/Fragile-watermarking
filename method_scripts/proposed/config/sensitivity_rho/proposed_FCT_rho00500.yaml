@@ -1,0 +1,14 @@
+# ── Sensitivity S1: Proposed @ rho=5.00% for FCT (delta=1e-6) ──
+# t* = 53  C_pk=1543  g=165071  metadata=1,341,708 B = 5.000% of 26,834,416 B
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_capacity: 1543
+iblt_mult: 1.5
+iblt_k: 3
+delta: 1.000000e-06
+gt_b: 64
+gt_m: 53
+gt_s_del: 53
+detection_mode: "compressed"

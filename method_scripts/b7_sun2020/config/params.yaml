@@ -1,0 +1,26 @@
+# B7: Sun et al. 2020 — Two-Level Group Eigenvalue Fragile Watermarking
+
+# Primary key column name
+pk_col: "id"
+
+# Numeric attribute columns (empty = auto-detect)
+# numeric_cols: []
+
+# Text attribute columns (empty = auto-detect)
+# text_cols: []
+
+# Team size γ: number of tuples per team (default = total number of columns)
+# gamma: null
+
+# Secret key (used for tuple hash computation within teams)
+secret_key: "B7_Sun2020_SecretKey"
+
+# Owner ID
+owner_id: "owner_001"
+
+# Seed management
+base_seed: 700
+num_trials: 10
+
+# Output directory
+output_dir: "results/b7_sun2020"

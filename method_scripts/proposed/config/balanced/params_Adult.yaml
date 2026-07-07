@@ -1,0 +1,14 @@
+# ── Proposed BALANCED baseline config for Adult (~10% storage, tc comparison) ──
+# (m,r,s)=(5,9,45)  denom=15  d_max=s+r=54  basic IBLT
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_capacity: 54
+iblt_mult: 1.5
+iblt_k: 3
+delta: 9.54e-7
+gt_b: 128
+gt_m: 5
+gt_s_del: 9
+detection_mode: "compressed"

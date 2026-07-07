@@ -1,0 +1,25 @@
+# ── Proposed Scheme: Parameter Analysis Config ─────────────────────────────
+# iblt_mode: "basic"  (explicit s and r, NOT storage_optimized)
+# iblt_capacity = d_max = s + r
+# g is computed automatically from Eq.12 in embed.py
+#
+# Controlled variable: vary_s
+# Fixed:   m=5, r=5
+# ────────────────────────────────────────────────────────────────────────────
+
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_mult: 1.5
+iblt_k: 3
+delta: 9.54e-7
+gt_b: 128
+detection_mode: "compressed"
+
+# d_max = s + r = 15 + 5 = 20
+iblt_capacity: 20    # s=15, r=5
+
+# Group-testing tolerance parameters
+gt_m: 5              # m = modification tolerance
+gt_s_del: 5          # r = deletion tolerance  (also used in p = 1/(m+r+1))

@@ -1,0 +1,17 @@
+# ── Sensitivity S1: B0 (per-tuple digest) @ rho=5.00% for Adult ──
+# Storage model: |W| = kappa + n*(lambda_pk + b).  No IBLT in the paper accounting;
+# the implementation reuses Proposed's full mode (its IBLT is overhead, not counted).
+# b_B0 = floor( (8*rho*B_R - kappa)/n - lambda_pk ) = 21
+# Paper-accounted size: 225,910 B = 4.917% of 4,594,040 B
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_capacity: 483            # matches Proposed's C_pk (implementation only)
+iblt_mult: 1.5
+iblt_k: 3
+delta: 1.000000e-06
+gt_b: 21
+gt_m: 23                       # not used in full mode but kept for solver compat
+gt_s_del: 23
+detection_mode: "full"

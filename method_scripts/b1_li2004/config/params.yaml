@@ -1,0 +1,23 @@
+# B1: Li et al. 2004 — Tamper Detection and Localization for Categorical Data
+# using Fragile Watermarks
+
+# Primary key column name in the CSV
+pk_col: "id"
+
+# Number of groups (g): tuples are partitioned into g groups by HASH(K, pk) mod g
+num_groups: 10
+
+# Secret key (in practice: use a strong secret; here a placeholder)
+secret_key: "B1_Li2004_SecretKey"
+
+# Number of watermark bits per group (must be even; W is qk//2 bits where qk = group size)
+# When num_groups is set, qk is determined by database size; bits_per_group is ignored
+# but retained for documentation.
+# bits_per_group: automatic (= qk // 2 where qk = group size)
+
+# Seed management
+base_seed: 100
+num_trials: 10
+
+# Output directory for intermediate results
+output_dir: "results/b1_li2004"

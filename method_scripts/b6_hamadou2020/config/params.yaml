@@ -1,0 +1,29 @@
+# B6: Hamadou et al. 2020 — Reversible Prediction-Error Expansion on LSD
+
+# Primary key column name
+pk_col: "id"
+
+# Numeric attribute columns (empty = auto-detect all numeric cols except pk)
+# numeric_cols: []
+
+# Secret key
+secret_key: "B6_Hamadou2020_SecretKey"
+
+# Owner ID
+owner_id: "owner_001"
+
+# Number of groups (v); computed automatically as ceil(alpha / mu) if not set.
+# Detection reuses this CA-stored v rather than recomputing it from suspicious data.
+# num_groups: null
+
+# Target/average group size (mu) used only to derive v=ceil(alpha / mu).
+# After hash partitioning, each group's actual tuple count determines its watermark length.
+# Defaults to num_numeric_cols if not set, matching the previous experiment convention.
+# mu: null
+
+# Seed management
+base_seed: 600
+num_trials: 10
+
+# Output directory
+output_dir: "results/b6_hamadou2020"

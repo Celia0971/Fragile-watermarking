@@ -1,0 +1,17 @@
+# ── Sensitivity S1: B0 (per-tuple digest) @ rho=1.00% for AGNews ──
+# Storage model: |W| = kappa + n*(lambda_pk + b).  No IBLT in the paper accounting;
+# the implementation reuses Proposed's full mode (its IBLT is overhead, not counted).
+# b_B0 = floor( (8*rho*B_R - kappa)/n - lambda_pk ) = 2
+# Paper-accounted size: 285,016 B = 0.961% of 29,650,876 B
+pk_col: "id"
+secret_key: "Proposed_IBLT_GT_SecretKey_v1"
+all_cols: null
+iblt_mode: "basic"
+iblt_capacity: 882            # matches Proposed's C_pk (implementation only)
+iblt_mult: 1.5
+iblt_k: 3
+delta: 1.000000e-06
+gt_b: 2
+gt_m: 25                       # not used in full mode but kept for solver compat
+gt_s_del: 25
+detection_mode: "full"

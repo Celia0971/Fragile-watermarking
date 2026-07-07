@@ -1,0 +1,32 @@
+# B3: Khan & Husain 2013 — Fragile Zero Watermarking via Digit/Length/Range Frequencies
+
+# Primary key column name
+pk_col: "id"
+
+# Numeric attribute columns (empty = auto-detect all numeric cols except pk)
+# numeric_cols: []
+
+# Secret key for encryption
+secret_key: "B3_Khan2013_SecretKey"
+
+# Owner ID (for CA registration simulation)
+owner_id: "owner_001"
+
+# Value range bins for ωr sub-watermark
+# Defines ranges [lower, upper) exclusive: values < 0 or >= 1000000 go to "other"
+range_bins:
+  - [0,    100]       # bin 0: 0–99
+  - [100,  1000]      # bin 1: 100–999
+  - [1000, 10000]     # bin 2: 1000–9999
+  - [10000, 100000]   # bin 3: 10000–99999
+  - [100000, 1000000] # bin 4: 100000–999999
+
+# Frequency comparison tolerance for WAR/WDR (floating point)
+tolerance: 1.0e-9
+
+# Seed management
+base_seed: 300
+num_trials: 10
+
+# Output directory
+output_dir: "results/b3_khan2013"
